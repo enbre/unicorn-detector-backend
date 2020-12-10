@@ -3,24 +3,23 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class game extends Model {
+  class unicorn extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      models.unicorn.hasMany(models.sighting)
     }
   };
-  game.init({
-    title: DataTypes.STRING,
-    publisher: DataTypes.STRING,
-    coverArtUrl: DataTypes.STRING,
-    completed: DataTypes.BOOLEAN
+  unicorn.init({
+    name: DataTypes.STRING,
+    image: DataTypes.STRING,
+    description: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'game',
+    modelName: 'unicorn',
   });
-  return game;
+  return unicorn;
 };
