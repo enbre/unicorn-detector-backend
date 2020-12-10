@@ -1,6 +1,7 @@
 // imports
 const express = require('express');
 const cors = require('cors');
+const weather = require('weather-js');
 const routes = require('./routes');
 
 const port = process.env.PORT || 4000;
