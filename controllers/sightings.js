@@ -8,22 +8,24 @@ const index = (req, res) => {
             message: 'No Sightings found in database.'
         })
         // respond with a JSON-ified object of games
-        res.json({ unicorns: foundSightings })
+        res.json({ sightings: foundSightings })
     })
     .catch(err => console.log("Error at sighting#index", err))
 }
 
 // not going to need this
-// const show = (req, res) => {
-//     db.unicorn.findByPk(req.params.id).then((foundUnicorn) => {
-//         if (!foundUnicorn) return res.json({
-//             message: 'Game with provided ID not found.'
-//         })
+const show = (req, res) => {
+    db.sighting.findByPk(req.params.id).then((foundSightings) => {
+        if (!foundSightings) return res.json({
+            message: 'Sighting with provided ID not found.'
+        })
 
-//         res.json({ unicorn: foundUnicorn })
-//     })
-//     .catch(err => console.log("Error at unicorn#index", err))
-// }
+        res.json({ unicorn: foundSightings })
+    })
+    .catch(err => console.log("Error at unicorn#index", err))
+}
+
+
 const create = (req, res) => {
     db.sighting.create(req.body).then((savedSighting) => {
         // validations?
@@ -60,7 +62,7 @@ const create = (req, res) => {
 
 module.exports = {
     index,
-   //  show,
+    show,
     create,
    //  update,
    //  destroy,
