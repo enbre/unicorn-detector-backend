@@ -1,7 +1,6 @@
 // imports
 const express = require('express');
 const cors = require('cors');
-const weather = require('weather-js');
 const routes = require('./routes');
 
 const port = process.env.PORT || 4000;
@@ -16,7 +15,7 @@ app.use(express.json());
 // middleware - cors
 const corsOptions = {
    // from which URLs do we want to accept requests
-   origin: ['http://localhost:3000'],
+   origin: ['http://192.168.0.133:3000'],
    credentials: true, // allow the session cookie to be sent to and from the client
    optionsSuccessStatus: 204
 }
