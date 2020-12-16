@@ -1,9 +1,10 @@
 'use strict';
-const data = require('../gameData.json');
+
+const data = require('../unicornData.json');
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('games', data.games, {})
+    await queryInterface.bulkInsert('unicorns', data.unicorns, {})
     /**
      * Add seed commands here.
      *
@@ -16,8 +17,7 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('games', null, {})
-    /**
+    await queryInterface.bulkDelete('unicorns', null, {})/**
      * Add commands to revert seed here.
      *
      * Example:
