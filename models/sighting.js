@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   sighting.init({
     unicornId: DataTypes.INTEGER,
     unicornImg: DataTypes.STRING,
+    unicornName: DataTypes.STRING,
     location: DataTypes.STRING,
     date: DataTypes.STRING
   }, {

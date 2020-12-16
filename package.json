@@ -15,8 +15,8 @@
     "mongoose": "^5.9.16",
     "nodemon": "^2.0.4",
     "pg": "^8.4.2",
-    "sequelize": "^6.3.5",
-    "weather-js": "^2.0.0"
+    "sequelize": "^6.3.5"
+
   },
   "devDependencies": {},
   "repository": {

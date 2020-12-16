@@ -14,6 +14,9 @@ module.exports = {
       unicornImg: {
         type: Sequelize.STRING
       },
+      unicornName: {
+        type: Sequelize.STRING
+      },
       location: {
         type: Sequelize.STRING
       },
