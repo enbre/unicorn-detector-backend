@@ -47,14 +47,14 @@ const show = (req, res) => {
 // }
 
 //not going to need this
-// const destroy = (req, res) => {
-//     db.unicorn.destroy({
-//       where: { id: req.params.id }
-//     }).then(() => {
-//       res.json({ message: `Game with id ${req.params.id} has been deleted.` })
-//     })
-//     .catch(err => console.log("Error at games#index", err))
-// }
+const destroy = (req, res) => {
+    db.unicorn.destroy({
+      where: { id: req.params.id }
+    }).then(() => {
+      res.json({ message: `Game with id ${req.params.id} has been deleted.` })
+    })
+    .catch(err => console.log("Error at games#index", err))
+}
 
 
 module.exports = {
@@ -62,5 +62,5 @@ module.exports = {
     show,
     // create,
     // update,
-    // destroy,
+    destroy,
 };
