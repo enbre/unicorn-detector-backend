@@ -5,7 +5,6 @@ const ctrl = require('../controllers');
 router.get('/', ctrl.sightings.index);
 router.get('/:id', ctrl.sightings.show);
 router.post('/', ctrl.sightings.create);
-router.delete('/:id', ctrl.sightings.destroy);
 
 
 // exports
