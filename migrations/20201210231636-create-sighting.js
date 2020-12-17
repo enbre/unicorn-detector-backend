@@ -17,11 +17,11 @@ module.exports = {
       unicornName: {
         type: Sequelize.STRING
       },
-      location: {
-        type: Sequelize.STRING
+      lat: {
+        type: Sequelize.INTEGER
       },
-      date: {
-        type: Sequelize.STRING
+      lon: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

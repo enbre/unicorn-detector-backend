@@ -17,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     unicornId: DataTypes.INTEGER,
     unicornImg: DataTypes.STRING,
     unicornName: DataTypes.STRING,
-    location: DataTypes.STRING,
-    date: DataTypes.STRING
+    lat: DataTypes.INTEGER,
+    lon: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'sighting',
